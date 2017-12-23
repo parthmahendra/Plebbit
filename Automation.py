@@ -24,7 +24,7 @@ def ReadDetails(name):
 
 def SeeIP():
     with Controller.from_port(port = 9051) as controller:
-      controller.authenticate("FPLP")
+      controller.authenticate(#Your control port password)
       for circ in controller.get_circuits():
         if circ.status != CircStatus.BUILT:
           continue
